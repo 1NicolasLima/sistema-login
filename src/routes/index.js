@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { BrowseRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
 import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
@@ -7,13 +7,13 @@ import Signup from "../pages/Signup";
 const Private = ({ Item }) => {
     const signed = false;
 
-    return (signed > 0 ? <Item /> : <Signin />)
+    return signed > 0 ? <Item /> : <Signin />
 }
 
 
 const RoutesApp = () => {
     return (
-        <BrowseRouter>
+        <BrowserRouter >
             <Fragment>
                 <Routes>
                     <Route exact path="/home" element={<Private Item={Home} />} />
@@ -22,7 +22,7 @@ const RoutesApp = () => {
                     <Route path="*" element={<Signin />} />
                 </Routes>
             </Fragment>
-        </BrowseRouter>);
+        </BrowserRouter >);
 }
 
 export default RoutesApp
