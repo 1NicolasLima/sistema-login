@@ -49,7 +49,7 @@ const Signin = () => {
                     onChange={(e) => [setSenha(e.target.value), setError("")]}
                 />
                 <C.LabelError>{error}</C.LabelError>
-                <Button Text="Entrar" onCLick={handleLogin} />
+                <Button Text="Entrar" onClick={handleLogin} />
                 <C.LabelSignup>
                     Não tem uma conta?
                     <C.Strong>
